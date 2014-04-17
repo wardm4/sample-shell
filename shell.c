@@ -162,13 +162,13 @@ int main(int argc, char *argv[], char *envp[]) {
   else {
     wait(NULL);
   }
-  printf("[MY_SHELL ] ");
+  printf(" sh> ");
   fflush(stdout);
   while(c != EOF) {
     c = getchar();
     switch(c) {
     case '\n': if(tmp[0] == '\0') {
-	printf("[MY_SHELL ] ");
+	printf(" sh > ");
       } 
       else {
 	fill_argv(tmp);
@@ -192,7 +192,7 @@ int main(int argc, char *argv[], char *envp[]) {
 	  }
 	}
 	free_argv();
-	printf("[MY_SHELL ] ");
+	printf(" sh> ");
 	bzero(cmd, 100);
       }
       bzero(tmp, 100);
